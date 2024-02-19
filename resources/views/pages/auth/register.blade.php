@@ -80,7 +80,11 @@
                                 id="register-password"
                                 icon="fa-solid fa-key"
                                 alpine-model="registerData.password"
+<<<<<<< HEAD
                                 placeholder="{{ __('Wachtwoord') }}"
+=======
+                                placeholder="{{ __('Enter a valid password') }}"
+>>>>>>> 5b07a9f181ca704277f1a49e47145c8e909e6e12
                                 type="password"
                             />
                         </div>
