@@ -45,7 +45,7 @@
                 <x-ui.modal
                     alpine-model="showLoginModal"
                     title="{{ __('Staff Login') }}"
-                    sub-title="{{ __('Only for authorities!') }}"
+                    sub-title="{{ __('Staff Login') }}"
                 >
                     <x-forms.login
                         :remove-register-button="true"

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Create a free account'))
+@section('title', __('Maak een gratis account'))
 
 @section('content')
 <x-container class="flex justify-center items-center mt-12" x-data="authentication('{{ getFigureUrl('%figure%', '%params%') }}')">
@@ -31,12 +31,12 @@
                         id="register-username"
                         icon="fa-regular fa-user"
                         alpine-model="registerData.username"
-                        placeholder="{{ __('Create a unique and awesome username') }}"
+                        placeholder="{{ __('Verzin een unieke gebruikersnaam') }}"
                         type="text"
                     />
 
                     <span class="w-full col-span-2 pt-2 text-slate-800 dark:text-slate-200 rounded-lg text-xs">
-                        {{ __("Your username will appear to others when chatting, adding, or creating rooms. Don't use difficult characters!") }}
+                        {{ __("Je gebruikersnaam is zichtbaar voor alle spelers van Lubbo! Gebruik geen aanstootgevende namen.") }}
                     </span>
                 </div>
 
@@ -52,19 +52,23 @@
                     />
 
                     <span class="w-full col-span-2 pt-2 text-slate-800 dark:text-slate-200 rounded-lg text-xs">
-                        {{ __("Please enter a valid email. We will use this information to recover your account if you lose access!") }}
+                        {{ __("Gebruik je eigen email. We gebruiken je email als je je wachtwoord bent vergeten.") }}
                     </span>
                 </div>
 
                 <div class="flex flex-col">
                     <x-ui.input
-                        label="{{ __('Date of Birth') }}"
+                        label="{{ __('Geboortedatum') }}"
                         autocomplete="birthday"
                         id="register-birthday"
                         icon="fa-regular fa-calendar-days"
                         alpine-model="registerData.birthday"
                         type="date"
                     />
+
+                    <span class="w-full col-span-2 pt-2 text-slate-800 dark:text-slate-200 rounded-lg text-xs">
+                        {{ __("Je moet minimaal 13 jaar oud zijn om op Lubbo te mogen spelen.") }}
+                    </span>
                 </div>
 
                 <div class="flex flex-col gap-4 bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 p-4 rounded-lg">
@@ -76,7 +80,7 @@
                                 id="register-password"
                                 icon="fa-solid fa-key"
                                 alpine-model="registerData.password"
-                                placeholder="{{ __('Enter a valid email') }}"
+                                placeholder="{{ __('Wachtwoord') }}"
                                 type="password"
                             />
                         </div>
@@ -87,7 +91,7 @@
                                 id="register-password-confirmation"
                                 icon="fa-solid fa-key"
                                 alpine-model="registerData.password_confirmation"
-                                placeholder="{{ __('Password') }}"
+                                placeholder="{{ __('Bevestig Wachtwoord') }}"
                                 @keyup.enter="onRegisterSubmit()"
                                 type="password"
                             />
@@ -95,7 +99,7 @@
                     </div>
                     <span class="w-full col-span-2 p-1 text-slate-800 dark:text-slate-200 rounded-lg text-xs">
                         <i class="fa-solid fa-triangle-exclamation mr-1 animate-bounce text-red-400"></i>
-                        {{ __("Don't share your password with anyone. We will never ask for your password.") }}
+                        {{ __("Deel uw wachtwoord met niemand. Lubbo zal nooit om je wachtwoord vragen.") }}
                     </span>
                 </div>
             </div>

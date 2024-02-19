@@ -9,7 +9,7 @@
 
     <x-container class="flex justify-center gap-1 items-center text-sm flex-col">
         <span class="dark:text-gray-200">
-            {!! __('© OrionCMS 2023 - Development by :a. All rights reserved.', [
+            {!! __('© Lubbo Group 2024 - Design by :a. All rights reserved.', [
                     'a' => <<<HTML
                         <a
                             data-tippy
@@ -23,7 +23,7 @@
                     HTML
                 ])
             !!}</span>
-        <span class="font-semibold dark:text-white">{{ __('This website is a not-for-profit educational project.') }}</span>
+        <span class="font-semibold dark:text-white">{{ __('We are in no way affiliated with Habbo or Sulake Corporation.') }}</span>
     </x-container>
 </div>
 

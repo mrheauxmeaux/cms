@@ -62,15 +62,7 @@
                 @endforeach
 
                 <div class="flex relative justify-center w-full lg:w-auto group gap-2 px-8 uppercase h-12 lg:h-full items-center">
-                    <x-ui.buttons.default
-                        class="!py-0.5 !px-1 border border-slate-600 text-white dark:text-white"
-                        @click="$dispatch('selectLanguageModal', true)"
-                        data-tippy
-                        data-tippy-content="<small>{{ __('Select Language') }}</small>"
-                        data-tippy-placement="bottom"
-                    >
-                        <i class="icon border-none language {{ strtolower(app()->getLocale()) }}"></i>
-                    </x-ui.buttons.default>
+
 
                     <x-ui.buttons.default
                         class="bg-blue-500 border border-blue-600 dark:border-slate-600 hover:bg-blue-400 dark:bg-slate-500 dark:hover:bg-slate-400 text-white dark:text-white"
