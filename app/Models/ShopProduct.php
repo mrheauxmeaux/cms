@@ -57,7 +57,7 @@ class ShopProduct extends Model
     public function formattedPrice(): Attribute
     {
         return Attribute::make(
-            get: fn () => Number::currency($this->price, config('paypal.currency'))
+            get: fn () => Number::currency($this->price / 100, config('paypal.currency'))
         );
     }
 }

@@ -24,6 +24,27 @@
                 ])
             !!}</span>
         <span class="font-semibold dark:text-white">{{ __('We are in no way affiliated with Habbo or Sulake Corporation.') }}</span>
+        <span class="dark:text-gray-200">
+            {{ __('Click here for our') }}
+            <a
+                data-tippy
+                target="_blank"
+                href="https://lubbohotel.co/terms.html"
+                class="underline underline-offset-4 text-blue-400"
+            >
+                {{ __('Terms') }}
+            </a>
+            {{ __(' and ') }}
+            <a
+                data-tippy
+                target="_blank"
+                href="https://lubbohotel.co/privacy.html"
+                class="underline underline-offset-4 text-blue-400"
+            >
+                {{ __('Privacy') }}
+            </a>
+			{{ __(' statement. ') }}
+        </span>
     </x-container>
 </div>
 
