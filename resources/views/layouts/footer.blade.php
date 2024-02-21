@@ -9,12 +9,9 @@
 
     <x-container class="flex justify-center gap-1 items-center text-sm flex-col">
         <span class="dark:text-gray-200">
-<<<<<<< HEAD
+
             {!! __('© Lubbo Group 2024 - Design by :a. All rights reserved.', [
-=======
-            {!! __('© OrionCMS :y - Development by :a. All rights reserved.', [
-                    'y' => date('Y'),
->>>>>>> 59c2797d4f514e5b0f207320f608034b5754119b
+
                     'a' => <<<HTML
                         <a
                             data-tippy
