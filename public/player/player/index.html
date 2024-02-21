@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/player/reset.css">
+    <link rel="stylesheet" type="text/css" href="/player/style.css?v=18">
+    <link rel="stylesheet" type="text/css" href="/player/tipped.css?v=1">
+</head>
+<body>
+    <div style="display: none">
+        <audio autoplay controls id="player2" src=""></audio>
+    </div>
+    <div id="area_player">
+        <div id="player" class="draggable ui-widget-content" style="left: 45%;z-index: 99999">
+            <div class="player_min">
+                <div class="guy"></div>
+                <div class="txt">SplushMedia</div>
+                <div class="handle tip" title="Move"></div>
+                <div class="open o-c tip" title="Maximize"></div>
+            </div>
+            <div class="player">
+                <div class="plus tip" title="Zet harder" style="cursor:pointer" onclick="SetVolumeHigher()"></div>
+                <div class="min tip" title="Zet zachter" style="cursor:pointer" onclick="SetVolumeLower()"></div>
+                <a id="playerButton" data-enable="1">
+                    <div class="play pause tip" title="Start/Stop ProRadio" style="cursor:pointer"></div>
+                </a>
+                <div class="separa"></div>
+                <div class="info djplaying tip" title="De DJ">
+                    <span id="currentspeaker" style="cursor:pointer"></span>
+                    </a>
+                </div>
+                <div class="info playingartist tip" title="Artiest">
+                    <span id="currentartist" style="cursor:pointer"></span>
+                    </a>
+                </div>
+                <div class="info playingsong tip" title="Nummer">
+                    <span id="currentplaying" style="cursor:pointer"></span>
+                    </a>
+                </div>
+                <div class="info listeners tip" title="Speelt nu">
+                    <span id="currentlistners" style="cursor:pointer"></span>
+                    </a>
+                </div>
+                <div class="close o-c tip" title="Minimize"></div>
+                <div class="handle tip" title="Verplaats"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="/player/tipped.js?v=20"></script>
+    <script src="/player/player.js?v=25 "></script>
+</body>
+</html>
