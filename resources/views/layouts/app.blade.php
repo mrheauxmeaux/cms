@@ -40,34 +40,17 @@
     <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}" />
 
-    @include('partials.js-parities')
-
-    @if(Auth::check() && $unsupportedFlashClient)
-        <script>
-            document.addEventListener('alpine:init', () => {
-                window.notyf.error('Your browser does not support Flash.', 8000)
-            });
-        </script>
-    @endif
-
-    @if(Auth::check() && session()->has('vpnError'))
-        <script>
-            document.addEventListener('alpine:init', () => {
-                window.notyf.error("{{ session()->get('vpnError') }}", 8000)
-            });
-        </script>
-    @endif
+    @includeWhen(!isset($cleanLayout), 'partials.js-parities')
 
     @vite(['resources/scss/app.scss'])
 </head>
-<body class="pt-12 lg:pt-0 overflow-x-hidden">
-    @if(!! getSetting('maintenance'))
-        <span class="w-full h-12 flex justify-center items-center bg-red-500 text-red-800 font-bold">
-            <i class="fa-solid fa-exclamation-circle mr-2"></i>
-            {{ __('The hotel is currently in maintenance mode.') }}
-        </span>
-    @endif
+<body
+    class="pt-12 lg:pt-0 overflow-x-hidden"
+    x-data='orion(@json(getSetting("default_cms_mode")))'
+>
+    @includeWhen(!isset($cleanLayout), 'layouts.header')
 
+<<<<<<< HEAD
     @include('pages.users.fragments.change-username')
 
     <x-header.main-nav />
@@ -103,10 +86,15 @@
     @endauth
 
     <main class="mt-4">
+=======
+    <main @class([
+        "mt-4" => !isset($cleanLayout)
+    ])>
+>>>>>>> 59c2797d4f514e5b0f207320f608034b5754119b
         @yield('content')
     </main>
 
-    @include('layouts.footer')
+    @includeWhen(!isset($cleanLayout), 'layouts.footer')
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/clipboard.min.js') }}"></script>
     @vite(['resources/js/app.js'])
