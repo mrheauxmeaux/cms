@@ -9,10 +9,8 @@
 
     <x-container class="flex justify-center gap-1 items-center text-sm flex-col">
         <span class="dark:text-gray-200">
-
-            {!! __('© Lubbo Group 2024 - Design by :a. All rights reserved.', [
-
-                    'a' => <<<HTML
+            {!! __('© OrionCMS - Developed by :orion', [
+                    'orion' => <<<HTML
                         <a
                             target="_blank"
                             href="https://github.com/orion-server"
